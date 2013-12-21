@@ -4,7 +4,10 @@
  */
 
 var express = require('express');
-var routes = require('./routes');
+var home = require('./routes');
+var blog = require('./routes/blog');
+var about = require('./routes/about');
+var contact = require('./routes/contact');
 var http = require('http');
 var path = require('path');
 
@@ -29,10 +32,10 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', routes.index);
-app.get('/blog', routes.blog);
-app.get('/about', routes.about);
-app.get('/contact', routes.contact);
+app.get('/', home.index);
+app.get('/blog', blog.index);
+app.get('/about', about.index);
+app.get('/contact', contact.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
