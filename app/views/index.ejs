@@ -5,7 +5,11 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <%= partial({url: 'views/partials/_header.ejs'}) %>
-    <%= partial({url: 'views/partials/_footer.ejs'}) %>
+  	<div id="main">
+  		<% include partials/_header.ejs %>
+  		<% include partials/_content.ejs %>
+  		<% include partials/_latestPosts.ejs %>
+  	</div>
+    <% include partials/_footer.ejs %>
   </body>
 </html>
