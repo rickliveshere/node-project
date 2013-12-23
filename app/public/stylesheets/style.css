@@ -5,14 +5,20 @@ body {
 }
 
 a {
-  color: #00B7FF;
+  color: #fff;
+  font-family: 'Voces', cursive;
 }
 
 h1 {
 	font-size: 26px;
 	font-weight: bolder;
-	margin: 0 0 20px 0;
+	display: inline-block;
 	text-align: center;
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(35, 0 ,102, 1);
+	background: url('../images/header-gradient.png') repeat-x top;
+	padding: 20px;
+	margin-top: 10px;
 }
 
 h2 {
@@ -40,18 +46,28 @@ h2 + p, h3 + p {
 	font-family: 'Chau Philomene One', sans-serif;
 	font-size: 36px;
 	margin: 0 0 0 0;
+	padding: 0 35px;
+	color: #E82C0C;
+	background: url('../images/header-gradient.png') repeat-x top;
 }
 
 #header {
 	top: 0;
 	z-index: 2000;
 	width: 100%;
+	min-height: 80px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+#header span.description {
+	display: none;
 }
 
 #header .nav {
 	float: right;
 	text-align: center;
-	margin-top: 5px;
+	background: url('../images/header-gradient.png') repeat-x top;
 }
 
 #header .nav ul {
@@ -64,7 +80,7 @@ h2 + p, h3 + p {
 
 #header .nav ul li {
 	list-style: none;
-	padding-bottom: 5px;
+	padding: 5px 0;
 }
 
 #header .nav ul li+li {
@@ -79,20 +95,28 @@ h2 + p, h3 + p {
 /* CONTENT */
 #content {
 	padding: 0;
+	text-align: center;
+}
+
+#content .strapline {
+	font-size: 20px;
+	color: #fff;
+	background: url('../images/header-gradient.png') repeat-x top;
+	padding: 15px;
+	margin-top: 10px;
 }
 
 /* FOOTER */
 #footer {
 	text-align: center;
 	padding: 35px 0;
-	background-color: red;
-	color: #fff;
 	margin: 35px 0 0 0;
+	display: none;
 }
 
 /* UNIVERSAL */
 #main {
-	padding: 15px 35px 0 35px;
+	padding: 0;
 }
 
 .clear {
@@ -101,4 +125,28 @@ h2 + p, h3 + p {
 
 .left {
 	float: left;
+}
+
+img.background {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+	
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+	
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -5;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.background {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
 }
