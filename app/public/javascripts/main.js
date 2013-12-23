@@ -2,38 +2,26 @@ var RR = RR || {};
 
 RR.Background = (function() {
 
-		var bgImages = $('img.background');
-		var currentBgIndex;
-		var bgInterval;
+		var bgTimeout;
 		
 		var swapImage = function() {
-			if (!bgImages)
-			{
-				clearInterval(bgInterval);
-				return false;
-			}
 
-			if (currentBgIndex === undefined)
-				currentBgIndex = 0;
-			
-			currentBgIndex++;
+			var $active = $('img.background.active');
+			var $next = ($('img.background.active').next().length > 0) 
+				? $('img.background.active').next() : $('img.background:first');
+      		$next.css('z-index', -2); 
+	  		
+	  		$active.fadeOut(300, function() {
+	  			$active.css('z-index',-3).show().removeClass('active');
+      			$next.css('z-index',-1).addClass('active');
 
-			$(bgImages).eq(currentBgIndex).fadeOut(function() {
-      			
-      			$(bgImages).each(function(x, element) {
-      				$(element).css(
-      					'zIndex', x + currentBgIndex
-      				)
-      			})
-   			});
+      			bgTimeout = setTimeout(swapImage, 7000)
+      		});
 		}
 
 		return {
 			init: function() {
-				if (!bgImages)
-					return false;
-
-				bgInterval = setInterval(swapImage, 2000);
+				swapImage();
 			}
 		}
 })();
