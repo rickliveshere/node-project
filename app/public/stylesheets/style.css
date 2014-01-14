@@ -5,7 +5,7 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #000;
   font-family: 'Voces', cursive;
 }
 
@@ -14,9 +14,9 @@ h1 {
 	font-weight: bolder;
 	display: inline-block;
 	text-align: center;
-	color: #fff;
-	text-shadow: 1px 1px 2px #054163;
-	background: url('../images/grey-pixel.png') repeat top;
+	color: #ccc;
+	text-shadow: 1px 1px 45px #E82C0C;
+	background: url('../images/source/grey-pixel.png') repeat top;
 	padding: 20px;
 	margin-top: 10px;
 	font-family: 'Rock Salt', cursive; 
@@ -49,7 +49,7 @@ h2 + p, h3 + p {
 	margin: 0 0 0 0;
 	padding: 0 35px;
 	color: #E82C0C;
-	background: url('../images/header-gradient.png') repeat-x top;
+	text-align: center;
 }
 
 #header {
@@ -59,23 +59,19 @@ h2 + p, h3 + p {
 	min-height: 80px;
 	padding-bottom: 10px;
 	padding-top: 10px;
-}
-
-#header span.description {
-	display: none;
+	background: #fff;
+	min-height: 60px;
 }
 
 #header .nav {
-	float: right;
 	text-align: center;
-	background: url('../images/header-gradient.png') repeat-x top;
+	color: #000;
 }
 
 #header .nav ul {
 	padding: 0;
 	margin: 0;
 	text-align: center;
-	float: right;
 	width: 100px;
 }
 
@@ -102,10 +98,10 @@ h2 + p, h3 + p {
 #content .strapline {
 	font-size: 20px;
 	color: #fff;
-	background: url('../images/grey-pixel.png') repeat top;
+	background: url('../images/source/grey-pixel.png') repeat top;
 	padding: 0 15px 15px 15px;
 	margin-top: 10px;
-	text-shadow: 1px 1px 2px #054163;
+	text-shadow: 1px 1px 2px #000;
 	font-weight: bold;
 }
 
@@ -124,10 +120,6 @@ h2 + p, h3 + p {
 
 .clear {
 	clear: both;
-}
-
-.left {
-	float: left;
 }
 
 img.background {

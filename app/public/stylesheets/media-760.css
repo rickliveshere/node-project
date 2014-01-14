@@ -1,9 +1,9 @@
 @media (min-width: 525px)
 {
+
 	#header .nav {
-		float: right;
+		width: 500px;
 		text-align: center;
-		
 	}
 
 	#header .nav ul {
